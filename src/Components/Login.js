@@ -1,13 +1,14 @@
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
-import React from 'react';
-// import { FcGoogle } from 'react-icons/fc';
-// import { useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
 import shareVideo from '../assets/share.mp4';
 import logo from '../assets/logowhite.png';
 import jwtDecode from 'jwt-decode';
+import authContext from '../context/authContext';
 
 
 const Login = () => {
+    // const [decoded, setDecoded] = useState(null);
+    const { setDecoded } = useContext(authContext);
 
 
     return (
@@ -18,12 +19,13 @@ const Login = () => {
                     <div className='p-5'>
                         <img src={logo} alt="logo" width="190px" />
                     </div>
+                    <img src="" alt="" />
                     <div className="">
                         <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}>
                             <GoogleLogin
                                 onSuccess={credentialResponse => {
                                     var decoded = jwtDecode(credentialResponse.credential);
-                                    console.log(decoded)
+                                    setDecoded(decoded);
                                 }}
                                 onError={() => {
                                     console.log('Login Failed');
@@ -34,7 +36,8 @@ const Login = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+
+export default Login;
