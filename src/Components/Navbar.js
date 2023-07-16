@@ -2,7 +2,7 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import { FcSearch } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import authContext from '../context/authContext';
+import authContext from '../context/auth/authContext';
 import blanckProfile from '../assets/blanckprofile.jpg';
 
 const Navbar = () => {
@@ -45,10 +45,6 @@ const Navbar = () => {
 
                 <span className='font-normal flex items-center rounded-md bg-slate-700 shadow-md sm:py-1 py-2 px-2 cursor-pointer sm:w-28 justify-center'>Social</span>
                 <span className='font-normal flex items-center rounded-md bg-slate-700 shadow-md py-1 px-2 cursor-pointer sm:w-28 justify-center'>Parivartan</span>
-
-                {/* <Link to={'/login'} className='flex items-center font-normal rounded-md border border-slate-400 bg-slate-700 shadow-md py-1 px-2 cursor-pointer sm:w-28 justify-center'>
-                    Login
-                </Link> */}
 
                 <div className="relative">
                     <img src={decoded ? decoded.picture : blanckProfile} alt="profile" className='h-10 w-10 rounded-full cursor-pointer' onClick={handleProfileClick} />

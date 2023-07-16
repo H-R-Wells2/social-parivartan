@@ -2,7 +2,7 @@ import './App.css';
 import Home from '../src/Container/Home'
 import Login from './Components/Login';
 import Navbar from './Components/Navbar';
-import AuthState from './context/AuthState';
+import AuthState from './context/auth/AuthState';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

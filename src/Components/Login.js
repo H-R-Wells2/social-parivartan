@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import shareVideo from '../assets/share.mp4';
 import logo from '../assets/logowhite.png';
 import jwtDecode from 'jwt-decode';
-import authContext from '../context/authContext';
+import authContext from '../context/auth/authContext';
 
 
 const Login = () => {
