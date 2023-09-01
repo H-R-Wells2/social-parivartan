@@ -2,6 +2,11 @@ import React from 'react'
 import food from '../assets/food.jpg'
 import blanckProfile from '../assets/blanckprofile.jpg'
 import { UserPlus } from 'lucide-react';
+import { BsHeart, BsHeartFill} from "react-icons/bs";
+import { FaRegCommentDots } from "react-icons/fa";
+import { IoSend } from "react-icons/io5";
+import { FaRegBookmark } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa6";
 
 
 const Postitem = () => {
@@ -28,6 +33,20 @@ const Postitem = () => {
                 </div>
                 <div className=''>
                     <img src={food} alt="demo" className='w-fit h-fit' />
+                </div>
+            </div>
+
+
+            <div className='flex justify-between w-full mt-2 items-center'>
+                <div className="flex ml-2 gap-3 md:gap-6">
+                    <BsHeart className=' text-2xl md:text-3xl' />
+                    <BsHeartFill className='text-2xl md:text-3xl hidden' />
+                    <FaRegCommentDots className='text-2xl md:text-3xl' />
+                    <IoSend className='text-2xl md:text-3xl' />
+                </div>
+                <div className="flex mr-2">
+                    <FaRegBookmark className='text-2xl md:text-3xl' />
+                    <FaBookmark className='text-2xl md:text-3xl hidden' />
                 </div>
             </div>
 

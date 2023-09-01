@@ -10,6 +10,7 @@ const Login = () => {
     // const [decoded, setDecoded] = useState(null);
     const { setDecoded } = useContext(authContext);
 
+    
 
     return (
         <div className='flex justify-start items-center flex-col h-screen'>
@@ -26,6 +27,7 @@ const Login = () => {
                                 onSuccess={credentialResponse => {
                                     var decoded = jwtDecode(credentialResponse.credential);
                                     setDecoded(decoded);
+                                    console.log(decoded);
                                 }}
                                 onError={() => {
                                     console.log('Login Failed');

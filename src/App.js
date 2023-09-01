@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import AuthState from './context/auth/AuthState';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FormWhileGoogle from './Components/FormWhileGoogle';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/login' element={<Login />} />
+              <Route path='/loginWG' element={<FormWhileGoogle />} />
             </Routes>
           </AuthState>
         </Router>
