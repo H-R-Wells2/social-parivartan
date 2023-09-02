@@ -2,7 +2,7 @@ import React from 'react'
 import food from '../assets/food.jpg'
 import blanckProfile from '../assets/blanckprofile.jpg'
 import { UserPlus } from 'lucide-react';
-import { BsHeart, BsHeartFill} from "react-icons/bs";
+import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa";
@@ -32,7 +32,7 @@ const Postitem = () => {
                     <span>Hello Na Public</span>
                 </div>
                 <div className=''>
-                    <img src={food} alt="demo" className='w-fit h-fit' />
+                    <img src={food} alt="demo" className='w-fit h-fit rounded-md' />
                 </div>
             </div>
 

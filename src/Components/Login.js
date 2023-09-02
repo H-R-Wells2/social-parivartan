@@ -7,10 +7,9 @@ import authContext from '../context/auth/authContext';
 
 
 const Login = () => {
-    // const [decoded, setDecoded] = useState(null);
     const { setDecoded } = useContext(authContext);
 
-    
+
 
     return (
         <div className='flex justify-start items-center flex-col h-screen'>

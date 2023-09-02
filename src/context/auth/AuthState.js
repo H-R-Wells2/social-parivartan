@@ -5,11 +5,6 @@ const AuthState = (props) => {
 
     const [decoded, setDecoded] = useState("");
 
-    
-
-
-
-
     return (
         <authContext.Provider value={{ decoded, setDecoded }}>
             {props.children}
